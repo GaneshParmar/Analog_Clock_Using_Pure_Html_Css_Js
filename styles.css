@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
 #clock_container{
     position: relative;
     background-color: red;
@@ -6,10 +14,44 @@
     margin: auto;
     width: 40vw;
     height: 40vw;
+    border: 10px solid rgb(77, 68, 68);
+    border-radius: 50%;;
+    z-index: -2;
+}
+
+
+
+h4{
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#digital_clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 27vw;
+    left: 16.2vw;
+    border: 4px solid black;
+    width: 8vw;
+    height: 4vw;
+    background-color: rgb(128, 128, 128);
+    /* z-index: -1; */
+}
+#digital_clock >p{
+    font-family: monospace;
+    font-size: 1.4rem;
+}
+
+#colon{
+    animation: example infinite 1s;
 }
 
 #hour,#min,#sec{
-    position: absolute;
+    position: absolute; 
     background-color: black;
     border-radius: 10px;
 }
@@ -39,4 +81,15 @@
     opacity: 0.6;
     transform-origin: bottom;
     /* display: none; */
+}
+
+
+@keyframes example{
+   0%{
+       opacity: 0;
+   }
+   100%{
+       opacity: 1;
+       visibility: visible;
+   }
 }
