@@ -22,6 +22,7 @@ setInterval(() => {
     hour.style.transform=`rotate(${hour_hand}deg)`;
     min.style.transform=`rotate(${minute_hand}deg)`;
     sec.style.transform=`rotate(${second_hand}deg)`;
+    console.log(second_hand);
     digital_hour.innerHTML=`${digital_hour_value}`;
     digital_min.innerHTML=`${digital_minute_value}`;
 
